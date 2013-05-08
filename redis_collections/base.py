@@ -209,7 +209,7 @@ class RedisCollection:
         :type data: anything serializable
         :rtype: string
         """
-        return unicode(self.pickler.dumps(data))
+        return self.pickler.dumps(data)
 
     def _unpickle(self, string):
         """Converts given string serialization back to corresponding data.
